@@ -1,0 +1,22 @@
+my_gitlab_instance_1:
+  url_root: "https://gitlab.com/"
+  token: "glpat-xxx"
+  stats_from: "2024-01-01T00:00:00Z"
+  stats_to: "2024-01-31T23:59:59Z"
+  from_project_id: 0
+  include_path: ""
+  exclude_path: ""
+  commit_stats_exclude_groups: []
+  commit_stats_exclude_projects: []
+
+my_gitlab_instance_2:
+  url_root: "https://gitlab.yourcompany.com/"
+  token: "glpat-xxx"
+  stats_year: "2024"
+  include_path: "core/backend"
+  exclude_path: ""
+  commit_stats_exclude_groups:
+    - "core/backend/obsolete"
+  commit_stats_exclude_projects:
+    - "core/backend/p1"
+    - "core/backend/p2"
