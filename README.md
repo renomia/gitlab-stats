@@ -11,10 +11,6 @@ This script fetches and processes statistics from GitLab projects, including num
 - Collects statistics on commits, merge requests, pipelines, tags, and releases
 - Outputs results to a CSV file
 
-## Configuration
-
-Configuration values are stored in `config.yaml`. Update this file with your GitLab instance details and other settings.
-
 ## Usage
 
 1. Clone the repository:
@@ -92,4 +88,4 @@ my_gitlab_instance_2:
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the Apache 2.0 License.
