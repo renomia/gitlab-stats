@@ -1,21 +1,28 @@
 # GitLab Dev Stats
 
-## Description
+This script fetches and exports development-oriented project statistics from GitLab specified instance, including number of commits, lines of code added and deleted, number of merged MRs, number of pipelines and their duration, number of tags created and number of releases over specified time period.
 
-This script fetches and processes statistics from GitLab projects, including number of commits, lines of code added and deleted, number of merged MRs, number of pipelines and their duration, number of tags created and number of releases.
+Demo output (stats fetched for 3 projects)
+
+```csv
+stats_from,stats_to,gl_instance,project_id,project_name,project_path,commits,commits_additions,commits_deletions,mrs,releases,tags,pipelines,pipelines_duration
+2024-01-01,2024-12-31,my_gitlab_instance_1,271,Attachment Service,core/backend/attachment-service,24,9489,2854,22,9,15,180,20068
+2024-01-01,2024-12-31,my_gitlab_instance_1,272,Partner Service,core/backend/partner-service,48,32771,4580,48,19,22,316,45673
+2024-01-01,2024-12-31,my_gitlab_instance_1,404,Contract Service,core/backend/contract-service,46,46020,6449,45,14,27,580,76136
+```
 
 ## Features
 
-- Fetches project details from GitLab
+- Fetches project details from GitLab via GitLab API
 - Filters projects based on include and exclude paths
-- Collects statistics on commits, merge requests, pipelines, tags, and releases
-- Outputs results to a CSV file
+- Collects statistics on commits, merge requests, pipelines, tags, and releases over given time period
+- Outputs results to a CSV file, row per project
 
 ## Usage
 
 1. Clone the repository:
    ```shell
-   git clone https://github.com/yourusername/gitlab-stats.git
+   git clone https://github.com/renomia/gitlab-stats.git
    cd gitlab-stats
    ```
 2. Install dependencies:
